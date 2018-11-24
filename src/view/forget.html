@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>蚁境 - <%= htmlWebpackPlugin.options.title%></title>
+    <%= require('html-loader!./layout/head-common.html')  %>
+</head>
+<body>
+    <%= require('html-loader!./layout/simple-header.html')  %>
+    <div class="panel">
+        <div class="layui-tab layui-tab-brief" lay-filter="user">
+            <ul class="layui-tab-title">
+                <li class="layui-this">通过手机号</li>
+                <li>通过邮箱</li>
+            </ul>
+            <div class="layui-form layui-tab-content" >
+                <div class="layui-tab-item layui-show">
+                    <div class="layui-form layui-form-pane">
+                        <form method="post">
+                          <div class="layui-form-item">
+                            <label for="L_sno" class="layui-form-label">
+                                <i class="layui-icon layui-icon-username"></i>学号</label>
+                            <div class="layui-input-inline">
+                              <input type="text" id="L_sno" name="sno" required="" lay-verify="required|number" autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label for="R_valid" class="layui-form-label">
+                                <i class="layui-icon layui-icon-vercode"></i>手机验证码</label>
+                            <div class="layui-input-inline">
+                              <input type="text" id="R_valid" name="validCode" required="" lay-verify="required" autocomplete="off" class="valid layui-input">
+                                <button  class="layui-btn" id="valid-btn">
+                                  发送验证码
+                                </button>
+                            </div>
+                            <div class="layui-form-item">
+                                <label for="R_pass" class="layui-form-label">
+                                <i class="layui-icon layui-icon-password"></i>新密码</label>
+                                <div class="layui-input-inline">
+                                  <input type="password" id="R_pass" name="password" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                                </div>
+                              </div>
+                              <div class="layui-form-item">
+                                <label for="R_pass" class="layui-form-label">
+                                <i class="layui-icon layui-icon-password"></i>确认密码</label>
+                                <div class="layui-input-inline">
+                                  <input type="password" id="R_pass2" name="password2" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                                </div>
+                              </div>
+                            <div class="layui-form-mid">
+                              <span style="color: #c00;display: none;">{{d.vercode}}</span>
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <button class="layui-btn" id="forget-btn" lay-filter="*" lay-submit="">修改</button>
+                            <span class="login">
+                              <a href="login.html">去登陆</a>
+                            </span>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!./layout/footer.html')  %>
+</body>
+</html>

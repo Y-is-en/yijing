@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>蚁境 - <%= htmlWebpackPlugin.options.title%></title>
+    <%= require('html-loader!./layout/head-common.html')  %>
+</head>
+<body>
+    <%= require('html-loader!./layout/simple-header.html')  %>
+    <div class="panel">
+        <div class="layui-tab layui-tab-brief" lay-filter="user">
+            <ul class="layui-tab-title">
+                <li ><a href="login.html">登入</a></li>
+                <li class="layui-this">注册</li>
+            </ul>
+            <div class="layui-form layui-tab-content" >
+                <div class="layui-tab-item layui-show">
+                    <div class="layui-form layui-form-pane">
+                        <form method="post">
+                          <div class="layui-form-item">
+                            <label for="R_sno" class="layui-form-label">
+                                <i class="layui-icon layui-icon-user"></i>学号</label>
+                            <div class="layui-input-inline">
+                              <input type="text" id="R_sno" name="sno" required="" lay-verify="required|number|usersno" autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label for="R_name" class="layui-form-label">
+                                <i class="layui-icon layui-icon-username"></i>姓名</label>
+                            <div class="layui-input-inline">
+                              <input type="text" id="R_name" name="name" required="" lay-verify="required|biaodian" autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">
+                                <i class="layui-icon layui-icon-male"></i>性别</label>
+                            <div class="layui-input-inline">
+                              <input type="radio" name="sex" value="男" title="男" checked="">
+                              <input type="radio" name="sex" value="女" title="女">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label for="R_science" class="layui-form-label">
+                                <i class="layui-icon layui-icon-read"></i>专业</label>
+                            <div class="layui-input-inline">
+                              <select name="science" lay-filter="science">
+                                <option value="" selected="">请选择专业</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label for="R_grade" class="layui-form-label">
+                                <i class="layui-icon layui-icon-template-1"></i>班级</label>
+                            <div class="layui-input-inline">
+                              <div class="grade">
+                                <select name="grade" lay-filter="grade">
+                                  <option value="" selected="">请选择年级</option>
+                                </select>
+                              </div>
+                              <div class="classes">
+                                <select name="class">
+                                <option value="" selected="">请选择班级</option>
+                                <option value="浙江">计科3班</option>
+                              </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label for="R_email" class="layui-form-label">
+                                <i class="layui-icon layui-icon-website"></i>邮箱</label>
+                            <div class="layui-input-inline">
+                              <input type="text" id="R_email" name="email" required="" lay-verify="required|email" autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label for="R_pass" class="layui-form-label">
+                            <i class="layui-icon layui-icon-password"></i>密码</label>
+                            <div class="layui-input-inline">
+                              <input type="password" id="R_pass" name="password" required="" lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label for="R_phone" class="layui-form-label">
+                                <i class="layui-icon layui-icon-cellphone"></i>手机</label>
+                            <div class="layui-input-inline">
+                              <input type="text" id="R_phone" name="phone" required="" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <label for="R_valid" class="layui-form-label">
+                                <i class="layui-icon layui-icon-vercode"></i>验证码</label>
+                            <div class="layui-input-inline">
+                              <input type="text" id="R_valid" name="validCode" required="" lay-verify="required" autocomplete="off" class="valid layui-input">
+                                <button  class="layui-btn" id="valid-btn">
+                                  发送验证码
+                                </button>
+                            </div>
+                            
+                          </div>
+                            <div class="layui-form-mid">
+                              <span style="color: #c00;display: none;">{{d.vercode}}</span>
+                            </div>
+                          </div>
+                          <div class="layui-form-item">
+                            <button class="layui-btn" lay-filter="*" lay-submit="">立即注册</button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= require('html-loader!./layout/footer.html')  %>
+    
+</body>
+</html>

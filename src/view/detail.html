@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>蚁境 - <%= htmlWebpackPlugin.options.title%></title>
+    <%= require('html-loader!./layout/head-common.html')  %>
+</head>
+<body>
+    <%= require('html-loader!./layout/header.html')  %>
+    <div class="layui-container">
+        <div class="layui-row card" id="card">
+            <div class="panel">
+                <div class="card-header card-color-red">
+                    <div class="card-cover"></div>
+                    <a class="card-pic">
+                       <img src="http://musicugc.qianqian.com/ugcdiy/pic/eaa173a6e7e9628b8d3c1067c70569f0.jpg"> 
+                    </a>
+                    <div class="card-desc">
+                        <h3><a href="" class="user">用户名 &nbsp;<span class="layui-badge layui-bg-blue">称谓</span></a></h3>
+                    </div>
+                </div>
+                <div class="card-tap">
+                    <a href=""><span>#正能量</span></a>
+                </div>
+                <div class="card-text">
+                    <p class="card-content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+                        <img src="http://musicugc.qianqian.com/ugcdiy/pic/2a1a123d1e63c3ff8e65a35f22495db2.jpg@o_1|s_2,w_192,h_192|c_1,w_192,h_192">
+                        <img src="http://musicugc.qianqian.com/ugcdiy/pic/2a1a123d1e63c3ff8e65a35f22495db2.jpg@o_1|s_2,w_192,h_192|c_1,w_192,h_192">
+                        <img src="http://musicugc.qianqian.com/ugcdiy/pic/2a1a123d1e63c3ff8e65a35f22495db2.jpg@o_1|s_2,w_192,h_192|c_1,w_192,h_192">
+                        hhh
+                    </p>
+                </div>
+                
+                <div class="card-footer">
+                    <h5><i class="datetime">10-20 0:44</i></h5>
+                    <span class="add-praise">
+                        <i class="praise-val">点赞</i>
+                        <i class="layui-icon layui-icon-praise"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="layui-row comment">
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+              <legend>评论</legend>
+            </fieldset> 
+            <form class="layui-form layui-form-pane">
+                <div class="layui-form-text">
+                    <div class="tip-text">还可输入<span class="remainder">200</span>个字</div>
+                    <div class="layui-input-block">
+                      <textarea placeholder="请输入内容" class="layui-textarea" name="content"></textarea>
+                    </div>
+                    <span class="faces" type="face" title="插入表情"><i class="iconfont icon-yxj-expression" style="top: 1px;"></i></span>
+                </div>
+                <div class="layui-input-block sub-btn">
+                  <input type="checkbox" name="hide" lay-skin="primary" title="匿名" value="0">
+                  <button class="layui-btn" lay-submit="" lay-filter="addComment">提交</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="layui-row comment">
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+              <legend>回复</legend>
+            </fieldset> 
+            <div class="answer">
+                <ul id="comment-container">
+                    <li>
+                        <div class="answer-user">
+                            <a href="">
+                                <img src="http://musicugc.qianqian.com/ugcdiy/pic/eaa173a6e7e9628b8d3c1067c70569f0.jpg">
+                            </a>
+                            <cite>
+                                <a href="">
+                                    用户名(称谓)
+                                </a>
+                                <i>2018-11-21 20:50:35</i>
+                            </cite>
+                        </div>
+                        <div class="answer-text">
+                            回复回复回复回复回复回复回复回复回复回复
+                        </div>
+                    </li>
+                    <li class="others">
+                        <div class="answer-user">
+                            <a href="">
+                                <img src="http://musicugc.qianqian.com/ugcdiy/pic/eaa173a6e7e9628b8d3c1067c70569f0.jpg">
+                            </a>
+                            <cite>
+                                <i>2018-11-21 20:50:35</i>
+                                <a href="">
+                                    用户名(称谓)
+                                </a>
+                            </cite>
+                        </div>
+                        <div class="answer-text">
+                            评论评论评论评论评论评论评论评论评论评论评论评论
+                        </div>
+                    </li>
+                    <li class="others comment-mine">
+                        <div class="answer-user">
+                            <a href="">
+                                <img src="http://musicugc.qianqian.com/ugcdiy/pic/eaa173a6e7e9628b8d3c1067c70569f0.jpg">
+                            </a>
+                            <cite>
+                                <i>2018-11-21 20:50:35</i>
+                                <a href="">
+                                    我
+                                </a>
+                            </cite>
+                        </div>
+                        <div class="answer-text">
+                            评论评论评论评论评论评论评论评论评论评论评论评论
+                        </div>
+                        <div class="delete">删除</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <%= require('html-loader!./layout/footer.html')  %>
+    <script id="cardinfo" type="text/html">
+        <div class="panel">
+            <div class="card-header {{d.image}}">
+                <div class="card-cover"></div>
+                {{# if(d.user){ }}
+                <a class="card-pic" href="./userinfo.html?id={{d.user[0]}}">
+                   <img src="{{d.user[3]}}"> 
+                </a>
+                <div class="card-desc">
+                    <h3><a href="" class="user" href="./userinfo.html?id={{d.user[0]}}">{{d.user[2]}} &nbsp;
+                        {{#if(d.user[1].split(',')[0]!=''){ }}
+                        <span class="layui-badge layui-bg-blue">{{ d.user[1].split(',')[0]}}</span>
+                        {{# } }}
+                    </a></h3>
+                </div>
+                {{# }else{ }}
+                <a class="card-pic">
+                   <img src="http://musicugc.qianqian.com/ugcdiy/pic/eaa173a6e7e9628b8d3c1067c70569f0.jpg"> 
+                </a>
+                <div class="card-desc">
+                    <h3><a href="" class="user">匿名 &nbsp;<span class="layui-badge layui-bg-blue">保密</span></a></h3>
+                </div>
+                {{# } }}
+            </div>
+            <div class="card-tap">
+                {{# if(d.tag&&d.tag.length>0){ 
+                        layui.each(d.tag, function(i, tag){  }}
+                    <a><span>#{{tag}}</span></a>
+                {{# }) } }}
+            </div>
+            <div class="card-text">
+                <p class="card-content">{{d.content}}
+                </p>
+            </div>
+            
+            <div class="card-footer">
+                <h5><i class="datetime">{{d.updateTime}}</i></h5>
+                <span class="add-praise {{d.ispraised}}">
+                    {{#if(d.praise>0){ }}
+                        <i class="praise-val" data-num={{d.praise}}>点赞({{d.praise}})</i>
+                    {{# } else{ }}
+                        <i class="praise-val" data-num=0>点赞</i>
+                    {{#} }}
+                    <i class="layui-icon layui-icon-praise"></i>
+                </span>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="commentinfo">
+        {{#  layui.each(d.list, function(index, item){ }}
+            <li class="">
+                <div class="answer-user">
+                    <a href="">
+                        <img src="http://musicugc.qianqian.com/ugcdiy/pic/eaa173a6e7e9628b8d3c1067c70569f0.jpg">
+                    </a>
+                    <cite>
+                        <a href="">
+                            用户名(称谓)
+                        </a>
+                        <i>2018-11-21 20:50:35</i>
+                    </cite>
+                </div>
+                <div class="answer-text">
+                    回复回复回复回复回复回复回复回复回复回复
+                </div>
+            </li>
+        {{#  }); }}
+    </script>
+
+    <script type="text/javascript">
+        layui.config({
+          base: '../js/'
+        }).extend({
+          fly: 'fly'
+        }).use('fly');
+    </script>
+
+    
+</body>

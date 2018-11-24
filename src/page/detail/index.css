@@ -1,0 +1,346 @@
+/*
+* @Author: 93935
+* @Date:   2018-11-14 21:34:17
+* @Last Modified by:   93935
+* @Last Modified time: 2018-11-23 22:25:08
+*/
+body{
+    background-color: #eee;
+    margin-top: 80px;
+}
+
+/*卡片样式*/
+.panel{
+    box-shadow: 2px 2px 5px #333;
+    padding: 0px;
+    margin: 0 10%;
+}
+
+.card .panel{
+    padding-bottom:42px;
+}
+.card-header{
+    padding: 10px 0;
+}
+.card-pic{
+    width: 58px;
+    height: 58px;
+    margin: 10px auto;
+    position: relative;
+    display: block;
+}
+.card-pic img{
+    width: 58px;
+    height: 58px;
+    border-radius: 40px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+}
+.user{
+    color: white;
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+}
+.user:hover{
+    color: #337ccb;
+    cursor: pointer;
+}
+.card-desc h3{
+    display:block;
+    position: relative;
+    text-align: center;
+}
+
+.card-text{
+    line-height: 24px;
+    word-wrap: break-word;
+    font-size: 17px;
+}
+.card-text p{
+    width: 95%;
+    display: block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    margin: 0 auto;
+}
+.card-tap{
+    padding: 5px 24px;
+}
+.card-tap span{
+    background-color: rgba(100,174,255,0.5);
+    display: inline-block;
+    color: #337ccb;
+    font-size: 14px;
+    line-height: 32px;
+    height: 32px;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+.card-music{
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin-top: 10px;
+}
+.music-pic img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 8;
+}
+.music-pic{
+    display: inline-block;
+
+}
+.play-music{
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    z-index: 10;
+    top: 8px;
+    background: url("http://static4.qianqian.com/web/static/i/MZziAHyo.png") no-repeat;
+    background-position: -924px -24px;
+}
+.music-info{
+    display: inline-block;
+}
+.music-info a{
+    display: block;
+    max-width: 500px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.music-info a:hover{
+    color: #337ccb;
+}
+.music-info a:last-child{
+    font-size: 12px;
+}
+.card-content .face,.answer-text .face{
+    display: inline;
+    width: 22px;
+    height: 22px;
+}
+.card-content img{
+    max-width: 250px;
+    max-height: 300px;
+    margin:5px;
+    overflow: hidden;
+    display:block;
+}
+.card-content img:hover,.card-tap span:hover{
+    cursor: pointer;
+}
+.card-footer span i{
+    float: right;
+    margin-right: 5px;
+}
+.card-footer span{
+    color: #999;
+    font-size: 15px;
+    margin-left: 47px;
+    margin-top: -22px;
+    float: right;
+    cursor: pointer;
+    max-width: 100px;
+    line-height: 80px;
+}
+.card-footer span.share-content{
+    max-width: 600px;
+    margin-right: -20px;
+}
+.datetime{
+    float: left;
+    font-size: 14px;
+    color:#999;
+    position: absolute;
+    margin-left:24px;
+    margin-top: 12px;
+}
+.social-share{
+    display: inline-block;
+}
+.add-comment a{
+    color: #999;
+}
+.add-praise{
+    margin-right: 24px;
+}
+.card-footer span:hover,.add-comment a:hover{
+    color: #337ccb;
+}
+.add-praise.praised{
+    color: #03A9F4;
+    font-weight: bold;
+}
+.card-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+    z-index: 0;
+}
+.card-header{
+    position: relative;
+}
+
+/*评论区*/
+.comment{
+    margin: 0 10%;
+}
+.comment textarea{
+    width: 95%;
+    margin: 0 auto;
+}
+.sub-btn{
+    float: right;
+    margin: 5px 25px;
+}
+.tip-text{
+    float: right;
+    margin-right: 25px;
+}
+.remainder{
+    color: red;
+}
+.layui-field-title{
+    margin-bottom: 0px;
+}
+.faces{
+    float: left;
+    display: block;
+    margin: 5px 30px;
+    cursor: pointer;
+}
+.faces:hover{
+    color: blue;
+}
+/*评论内容区*/
+.answer{
+    padding: 20px 5%;
+}
+.answer ul li{
+    position: relative;
+    font-size: 0;
+    margin-bottom: 10px;
+    padding-left: 60px;
+    min-height: 68px;
+}
+.answer *{
+    box-sizing: content-box;
+}
+.answer-user{
+    position: absolute;
+    left: 3px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+.answer-user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.answer-user cite{
+    position: absolute;
+    left: 60px;
+    top: -2px;
+    width: 500px;
+    line-height: 24px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #999;
+    text-align: left;
+    font-style: normal;
+}
+.answer-user cite i{
+    padding-left: 15px;
+    font-style: normal;
+}
+.answer-text{
+    position: relative;
+    line-height: 22px;
+    margin-top: 25px;
+    padding: 8px 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    color: #333;
+    word-break: break-all;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+.answer-text:after{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 13px;
+    width: 0;
+    height: 0;
+    border-style: solid dashed dashed;
+    border-color: #fff transparent transparent;
+    overflow: hidden;
+    border-width: 10px;
+}
+.answer ul .others{
+    text-align: right;
+    padding-left: 0;
+    padding-right: 60px;
+}
+.others .answer-user{
+    left: auto;
+    right: 3px;
+}
+.others .answer-user cite{
+    left: auto;
+    right: 60px;
+    text-align: right;
+}
+.others .answer-user cite i{
+    padding-left: 0;
+    padding-right: 15px;
+}
+.others .answer-text{
+    margin-left: 0;
+    text-align: left;
+}
+.others .answer-text:after{
+    left: auto;
+    right: -10px;
+}
+.comment-mine .answer-text{
+    background-color: #5FB878;
+    color: #fff;
+}
+.comment-mine .answer-text:after{
+    border-top-color: #5FB878;
+}
+.delete{
+    position: absolute;
+    left: 60px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #999;
+    text-align: left;
+    display: block;
+}
+.delete:hover{
+    color: blue;
+    cursor: pointer;
+}
+.others .delete{
+    left: auto;
+    right: 60px;
+    text-align: right;
+}

@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "hogan": "^1.0.2"
+    "layui-src": "^2.3.0"
   }
 }

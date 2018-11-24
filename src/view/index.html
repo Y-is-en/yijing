@@ -2,9 +2,406 @@
 <html>
 <head>
     <title>蚁境 - <%= htmlWebpackPlugin.options.title%></title>
-
+    <%= require('html-loader!./layout/head-common.html')  %>
+    <link rel="stylesheet" href="../resource/css/share.min.css">
 </head>
 <body>
-hello dev!
+    <%= require('html-loader!./layout/header.html')  %>
+    <div class="layui-container">
+            <div class="layui-row layui-col-space15">
+                <div class="zupu layui-col-md3">
+                    <a href="" id="img-zupu">
+                    </a>
+                </div>
+                <div class="layui-col-md6" >
+                    <!-- 轮播图 -->
+                    <div class="banner layui-carousel" id="banner">
+                      <div carousel-item>
+                        <div><img src="../resource/banner1.jpg"></div>
+                        <div><img src="../resource/banner2.jpg"></div>
+                        <div><img src="../resource/banner3.jpg"></div>
+                      </div>
+                    </div>
+                </div>
+                <div class="layui-col-md3" >
+                    <!-- 个人信息 -->
+                    <div class="user-info" id="user-info">
+                        <div class="user-photo">
+                            <a href="">
+                                <img src="http://himg.bdimg.com/sys/portrait/item/6f5031382e2e2e324071712e636f6d3f4e.jpg">
+                            </a>
+                        </div>
+                        <span><a href="login.html" class="username">未登录</a></span>
+                        <span class="layui-badge layui-bg-blue">称谓</span>
+                        <div class="signin layui-btn">今日签到</div>
+                        <div class="layui-btn write-btn">写卡片</div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md9">
+                    <div class="layui-row ">
+                        <div class="panel tap-panel">
+                            <div class="type-panel">
+                                <div class="choosed-taps">
+                                    标签：
+                                    <span class="taps choosed-tap default-tap">默认全部</span>
+                                </div>
+                                <div class="hot-tap">
+                                    热门标签： 
+                                    <span class="taps">#生活</span>
+                                    <span class="taps">#学习</span>
+                                    <span class="taps">#吐槽</span>
+                                    <span class="taps">#正能量</span>
+                                    <span class="tap-btn"><i class="layui-icon layui-icon-down"></i>更多标签</span>
+                                </div>
+                                <div class="more-tap hide">
+                                    更多标签：
+                                    <span class="taps">#娱乐</span>
+                                    <span class="tap-btn"><i class="layui-icon layui-icon-up"></i>收起</span>
+                                </div> 
+                            </div>
+                            <span class="write-btn layui-btn layui-btn-normal hide">
+                                <i class="layui-icon layui-icon-edit"></i>写卡片
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="top layui-row">
+                        <div class="panel">
+                            <div class="panel-title">
+                                <span>置顶</span>
+                            </div>
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <a href="" class="avatar">
+                                            <img src="https://cdn.layui.com/avatar/6497232.jpg?t=1523408456711">
+                                        </a>
+                                        <div class="list-info">
+
+                                            <a href="" class="user">
+                                                用户名 
+                                                <span class="layui-badge layui-bg-blue">称谓</span>
+                                            </a>
+                                            <span class="list-time">2018-10-19</span>
+                                        </div>
+                                        <h2 class="list-content">
+                                            <span class="list-tap">#标签</span>
+                                            内容。内容。内容。内容。内容。内容。内容。内容。内容。
+                                            内容。内容。内容。内容。内容。内容。内容。内容。内容。
+                                            <span class="comment">
+                                                <i class="layui-icon layui-icon-dialogue"></i>99+
+                                            </span>
+                                        </h2>
+                                        <span class="praise">
+                                                <i class="layui-icon layui-icon-praise"></i>99+
+                                        </span>   
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="layui-row">
+                        <div class="card" id="card-info">    
+                            <ul id="card-container">
+                                <li>
+                                    
+                                    <div class="panel layui-bg-red">
+                                        <div class="card-cover"></div>
+                                        <div class="card-header">
+                                            
+                                            <a class="card-pic">
+                                               <img src="https://cdn.layui.com/avatar/6497232.jpg?t=1523408456711"> 
+                                            </a>
+                                            <div class="card-desc">
+                                                <h3><a href="" class="user">用户名 &nbsp;<span class="layui-badge layui-bg-blue">称谓</span></a></h3>
+                                                <h5><span class="datetime">10-20 0:44</span></h5>
+                                            </div>
+                                            <a href="" class="add-friend" title="加好友">
+                                                <i class="layui-icon layui-icon-add-1"></i>
+                                                加好友
+                                            </a>
+                                        </div>
+                                        <a href="">
+                                            <div class="card-text">
+                                                <p class="card-content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                                            </div>
+                                        </a>
+                                        <div class="card-tap">
+                                            <a href=""><span>#正能量</span></a>
+                                        </div>
+                                        <div class="card-music">
+                                            <a href="" class="music-pic">
+                                                <img src="http://qukufile2.qianqian.com/data2/pic/665b228483aa25faddc7a4b37530d521/335898570/335898570.jpg@s_1,w_90,h_90" >
+                                                <i class="play-music"></i>
+                                            </a>
+                                            <div class="music-info">
+                                                <a href="" class="music-name">音乐名称音乐名称音乐名称音乐名称音乐名称音乐名称</a>
+                                                <a href="" class="music-desc">内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-image">
+                                            <img src="http://musicugc.qianqian.com/ugcdiy/pic/2a1a123d1e63c3ff8e65a35f22495db2.jpg@o_1|s_2,w_192,h_192|c_1,w_192,h_192">
+                                            <img src="http://musicugc.qianqian.com/ugcdiy/pic/2a1a123d1e63c3ff8e65a35f22495db2.jpg@o_1|s_2,w_192,h_192|c_1,w_192,h_192">
+                                            <img src="http://musicugc.qianqian.com/ugcdiy/pic/2a1a123d1e63c3ff8e65a35f22495db2.jpg@o_1|s_2,w_192,h_192|c_1,w_192,h_192">
+                                            
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="add-praise">
+                                                <i class="praise-val">点赞</i>
+                                                <i class="layui-icon layui-icon-praise"></i>
+                                            </span>
+                                            <span class="add-comment">
+                                                <i class="comment-val">评论</i>
+                                                <i class="layui-icon layui-icon-dialogue"></i>
+                                            </span>
+                                            <span class="share">
+                                                <i class="share-val">分享</i>
+                                                <i class="layui-icon layui-icon-share"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>        
+                </div>
+                <div class="layui-col-md3">
+                    <div class="topic panel">
+                        <ul>
+                            <li>
+                                <a href="" class="topic-link">#我要点歌#</a>
+                                <img src="http://ugcpic.qianqian.com/ugcdiy/pic/bos_ugcclient_15301663508b596d974b51b0057cdd723f72b68cf3.jpg@w_350,h_170,o_1" class="topic-img">
+                                <div class="topic-bg"></div>
+                                <h3 class="topic-text-title">
+                                    <a class="topic-title">#我要点歌#</a>
+                                </h3>
+                                <!-- <h5 class="topic-text-num">
+                                    <i class="layui-icon layui-icon-fire"></i>1000
+                                </h5> -->
+                            </li>
+                            <li>
+                                <a href="" class="topic-link">#我要表白#</a>
+                                <img src="http://ugcpic.qianqian.com/ugcdiy/pic/bos_ugcclient_1534823351cf651d6b09da9fbe96a906bbcd974e97.jpg@w_350,h_170,o_1" class="topic-img">
+                                <div class="topic-bg"></div>
+                                <h3 class="topic-text-title">
+                                    <a class="topic-title">#我要表白#</a>
+                                </h3>
+                            </li>
+                            <li>
+                                <a href="" class="topic-link">#我要打赌#</a>
+                                <img src="http://ugcpic.qianqian.com/ugcdiy/pic/bos_ugcclient_1524462670f8e4a06808a07128cb01f7e40942f3ae.jpg@w_350,h_170,o_1" class="topic-img">
+                                <div class="topic-bg"></div>
+                                <h3 class="topic-text-title">
+                                    <a class="topic-title">#我要打赌#</a>
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- 添加卡片窗口 -->
+    <div class="layui-form" id="addbox" style="display: none;">
+        <div class="cover"></div>
+        <form method="post" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">标签</label>
+                <div class="tap-content">
+                    <span class="tap">学习</span>
+                    <span class="tap">生活</span>
+                    <span class="tap">娱乐</span>
+                    <span class="tap">社交</span>
+                    <span class="tap">表白</span>
+                    <div class="self-box">
+                        <input type="text" placeholder="自定义标签" autocomplete="off" class="layui-input self-tap">
+                        <div class="layui-btn" id="addtap">
+                            添加
+                        </div>
+                    </div>
+                </div>
+                
+            </div>  
+            <div class="layui-form-item layui-row">
+                <label class="layui-form-label">卡片颜色</label>
+                <div class="color-content">
+                    <span class="default color choosed-color">默认</span>
+                    <span class="card-color-red color">红色</span>
+                    <span class="card-color-pink color">粉红</span>
+                    <span class="card-color-green color">绿色</span>
+                    <span class="card-color-yellow color">黄色</span>
+                    <span class="card-color-blue color">蓝色</span>
+                    <span class="card-color-cyan color">青色</span>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">内容</label>
+                <div class="card-content">
+                    <div class="layui-input-block">
+                        <textarea id="card_content" name="content" required lay-verify="required" placeholder="详细描述" class="layui-textarea fly-editor" style="height: 260px;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item layui-row">
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">浏览权限</label>
+                    <div class="layui-input-inline">
+                        <select name="limit" lay-verify="">   
+                            <option value="0">所有人可见</option>   
+                            <option value="10">同学好友可见</option>   
+                            <option value="1">被@的用户可见</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <label class="layui-form-label">是否匿名</label>
+                    <div class="layui-input-inline">
+                      <input type="checkbox" name="hide" title="匿名" value="0">
+                    </div>
+                </div>
+            </div> 
+            <div class="layui-form-item">
+                    <button class="layui-btn" id="card-btn" lay-submit lay-filter="addcard">提交</button>
+            </div>
+        </form>
+    </div>
+    <%= require('html-loader!./layout/footer.html')  %>
+    <script id="userinfo" type="text/html">
+        <div class="user-photo">
+            <a href="">
+                <img src="http://himg.bdimg.com/sys/portrait/item/6f5031382e2e2e324071712e636f6d3f4e.jpg">
+            </a>
+        </div>
+        <span><a class="username">{{d.name}}</a></span>
+        {{# if(d.relation!=''){ }}
+        <span class="layui-badge layui-bg-blue">{{d.relation}}</span>
+        {{# } }}
+        <div class="signin layui-btn">今日签到</div>
+        <div class="write-btn layui-btn">写卡片</div>
+    </script>
+    <script id="cardinfo" type="text/html">
+        {{#  layui.each(d.list, function(index, item){ }}
+        <li>
+            <div class="panel {{item.image[0]}}">
+                <div class="card-cover"></div>
+                {{# if(item.user){ }}
+                <div class="card-header">
+                    <a class="card-pic" href="./userinfo.html?id={{item.user[0]}}">
+                       <img src="{{item.user[3]}}"> 
+                    </a>
+                    <div class="card-desc">
+                        <h3><a href="./userinfo.html?id={{item.user[0]}}" class="user">{{item.user[2]}} &nbsp;
+                        {{#if(item.user[1].split(',')[0]!=''){ }}
+                            <span class="layui-badge layui-bg-blue">{{ item.user[1].split(',')[0]}}</span>
+                            {{# } }}
+                        </a></h3>
+                        <h5><span class="datetime">{{item.updateTime}}</span></h5>
+                    </div>
+                    {{# if(item.isfriend){ }}
+                    <a data-friend="{{item.user[0]}}" class="add-friend" title="加好友">
+                        <i class="layui-icon layui-icon-add-1"></i>
+                        加好友
+                    </a>
+                    {{# } }}
+                </div>
+                {{# } else{ }}
+                <div class="card-header">
+                    <a class="card-pic">
+                       <img src="http://himg.bdimg.com/sys/portrait/item/6f5031382e2e2e324071712e636f6d3f4e.jpg"> 
+                    </a>
+                    <div class="card-desc">
+                        <h3><a class="user">匿名用户 &nbsp;<span class="layui-badge layui-bg-blue">神秘亲戚</span></a></h3>
+                        <h5><span class="datetime">{{item.updateTime}}</span></h5>
+                    </div>
+                </div>
+                {{# } }}
+                <a href="./detail.html?cardid={{item.id}}">
+                    <div class="card-text">
+                        <p class="card-content">{{item.content}}</p>
+                    </div>
+                </a>
+                <div class="card-tap">
+                    {{# if(item.tag&&item.tag.length>0){ 
+                        layui.each(item.tag, function(i, tag){  }}
+                    <a><span>#{{tag}}</span></a>
+                    {{# }) } }}
+                </div>
+                {{#if(item.music){ }}
+                <div class="card-music">
+                    <a href="" class="music-pic">
+                        <img src="http://qukufile2.qianqian.com/data2/pic/665b228483aa25faddc7a4b37530d521/335898570/335898570.jpg@s_1,w_90,h_90" >
+                        <i class="play-music"></i>
+                    </a>
+                    <div class="music-info">
+                        <a href="" class="music-name">音乐名称音乐名称音乐名称音乐名称音乐名称音乐名称</a>
+                        <a href="" class="music-desc">内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍</a>
+                    </div>
+                </div>
+                {{# } }}
+                <div class="card-image">
+                    {{# layui.each(item.image, function(index, item){ }}
+                        {{#     if(index!=0&&item!=''){ }}
+                            <img src="{{item}}" layer-src="{{item}}">
+                        {{# } }}
+                    {{# }) }}
+                </div>
+                <div class="card-footer">
+                    {{# if(item.ispraise){ }}
+                    <span class="add-praise praised" data-cardId="{{item.id}}">
+                        {{#if(item.praise>0){ }}
+                        <i class="praise-val" data-num={{item.praise}}>{{item.praise}}</i>
+                        {{# } else{ }}
+                        <i class="praise-val" data-num=0>点赞</i>
+                        {{#} }}
+                        <i class="layui-icon layui-icon-praise"></i>
+                    </span>
+                    {{# } else{ }}
+                    <span class="add-praise" data-cardId="{{item.id}}">
+                        {{#if(item.praise>0){ }}
+                        <i class="praise-val" data-num={{item.praise}}>{{item.praise}}</i>
+                        {{# } else{ }}
+                        <i class="praise-val" data-num=0>点赞</i>
+                        {{#} }}
+                        <i class="layui-icon layui-icon-praise"></i>
+                    </span>
+                    {{#} }}
+                    <span class="add-comment">
+                        <a href="./detail.html?cardid={{item.id}}">
+                            <i class="comment-val">评论</i>
+                            <i class="layui-icon layui-icon-dialogue"></i>
+                        </a>
+                    </span>
+                    <span class="share">
+                        <i class="share-val">分享</i>
+                        <i class="layui-icon layui-icon-share"></i>
+                    </span>
+                    <span class="share-content hide" >
+                        <i><div class="social-share" data-title="
+                            {{# if(item.user){ }}
+                                    {{item.user[2]}}写
+                            {{# }else{ }}
+                                一个匿名
+                            {{# } }}
+                            的卡片，了解一下" data-description="西荣蚁境社区的分享" data-url="http://www.rcswu.cn/view/detail.html?cardid={{item.id}}"></div></i>
+                        <i class="share-val">分享到</i>
+                    </span>
+                </div>
+            </div>
+        </li>
+        {{#  }); }}
+    </script>
+    <script type="text/javascript">
+        layui.config({
+          base: '../js/'
+        }).extend({
+          fly: 'fly'
+        }).use('fly');
+    </script>
+    <script src="../resource/js/social-share.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+/*
+* @Author: 93935
+* @Date:   2018-10-17 21:53:35
+* @Last Modified by:   93935
+* @Last Modified time: 2018-10-23 14:00:50
+*/
+body{
+    background-color: #468ed8;
+}
+.panel{
+    width: 480px;
+    height: 640px;
+    margin: 100px auto 0 auto;
+}
+.panel button{
+    display: block;
+    margin: 10px auto;
+}
+.layui-tab-content{
+    margin-top:10px;
+    font-size: 15px;
+    padding: 0 30px;
+}
+.layui-form-item .layui-input-inline{
+    width: 300px;
+}
+.forget{
+    display: block;
+    text-align: center;
+    font-size: 13px;
+}
+.layui-form-item i{
+    margin-right: 5px;
+    display: inline-block;
+}
+.grade{
+    width: 140px;
+    display: inline-block;
+}
+.classes{
+    width: 155px;
+    display: inline-block;
+}
+.valid.layui-input{
+    width: 172px;
+    display: inline-block;
+}
+#valid-btn{
+    width: 120px;
+    display: inline-block;
+    margin: -1px 0 0 0;
+}

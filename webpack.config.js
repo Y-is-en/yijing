@@ -18,14 +18,20 @@ var getHtmlConfig = function(name, title){
 };
 // webpack config
 var config = {
+    mode: 'development',
     entry: {
-        'common'            : ['./src/page/common/index.js'],
+        'common'            : ['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/'],
         'index'             : ['./src/page/index/index.js'],
         'login'             : ['./src/page/login/index.js'],
+        'reg'               : ['./src/page/reg/index.js'],
+        'forget'            : ['./src/page/forget/index.js'],
+        'face'              : ['./src/page/common/res/face.js'],
+        'fly'               : ['./src/page/common/res/index.js'],
+        'detail'             : ['./src/page/detail/index.js']
     },
     output: {
         path        :  path.resolve(__dirname, 'dist'),
-        publicPath  : '/dist',
+        publicPath  : '/dist/',
         filename    : 'js/[name].js'
     },
     externals : {
@@ -88,7 +94,7 @@ var config = {
         }
     },
     devServer: {
-      contentBase: '.'
+      contentBase: './dist'
     },
     plugins: [
         
@@ -97,6 +103,9 @@ var config = {
         // html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('login', '登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('reg', '注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('forget', '找回密码')),
+        new HtmlWebpackPlugin(getHtmlConfig('detail', '卡片详情')),
     ]
 };
 

@@ -2,8 +2,497 @@
 * @Author: 93935
 * @Date:   2018-10-17 21:53:16
 * @Last Modified by:   93935
-* @Last Modified time: 2018-10-18 00:26:04
+* @Last Modified time: 2018-11-20 16:08:28
 */
-*{
+body{
     background-color: #eee;
+    margin-top: 80px;
 }
+.zupu{
+    height: 298px;
+    padding-top: 13px;
+}
+#img-zupu{
+    background-image: url("../../image/zupu.jpg");
+    height: 270px;
+    width: 230px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px;
+}
+.banner{
+    box-shadow: 2px 2px 5px #333;
+
+}
+.user-info{
+    height: 240px;
+    padding: 20px;
+    display: block;
+    background: #FFF;
+    box-shadow: 2px 2px 5px #333;
+    text-align: center;
+}
+.user-photo a{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+.user-photo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    display: block;
+    float: none;
+    margin: 0 auto;
+}
+.username{
+    display: inline-block;
+    padding: 10px;
+    line-height: 40px;
+    font-size: 22px;
+    z-index: 1000;
+}
+.username:hover{
+    color: #337ccb;
+    cursor: pointer;
+}
+.user-info .layui-badge{
+    display: inline-block;
+    z-index: 100;
+}
+.user-info .layui-btn{
+    background-color: #009688;
+    display: block;
+    margin: 5px;
+}
+
+/*置顶区样式*/
+.top{
+    margin-top: 95px;
+}
+.panel{
+    box-shadow: 2px 2px 5px #333;
+}
+.panel-title{
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    border-radius: 2px 2px 0 0;
+}
+.panel-title span{
+    color: #666;
+    padding: 0 8px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.list li{
+    position: relative;
+    height: 45px;
+    line-height: 22px;
+    padding: 15px 15px 15px 75px;
+    border-bottom: 1px dotted #e2e2e2;
+}
+.avatar{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.avatar img{
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    border-radius: 2px;
+}
+.user{
+    font-size: 15px;
+    color: #337ccb;
+}
+.user .layui-badge{
+    font-size: 13px;
+
+}
+.list-time{
+    display: inline-block;
+    padding-left: 15px;
+    color: #999;
+}
+.list-tap{
+    color: #009688;
+    font-size: 13px;
+}
+.list-content{
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    padding-right: 35px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.comment,.praise{
+    position: absolute;
+    right: 0;
+    padding-right: 0!important;
+    font-size: 13px;
+}
+.comment i,.praise i{
+    position: relative;
+    padding: 0 3px 0 15px;
+}
+.praise{
+    top:0;
+    padding-top: 9px;
+}
+
+/*标签选择样式*/
+.type-panel{
+    font-size: 14px;
+    padding: 5px 15px;
+    max-width: 80%;
+    display: inline-block;
+}
+.type-panel span{
+    color: #337ccb;
+    font-size: 15px;
+    padding: 2px;
+}
+span.choosed-tap{
+    background-color: #d0dfef;
+    border: 1px solid #337ccb;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.type-panel span:hover{
+    border: 1px solid #337ccb;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.write-btn.layui-btn-normal{
+    float: right;
+    margin:10px; 
+}
+.hot-tap,.more-tap{
+    margin-top: 5px;
+}
+.tap-panel{
+    position: absolute;
+    width: 830px;
+}
+.tap-fixed{
+    position:fixed;
+    top:70px;
+    z-index: 1000;
+    box-shadow: 1px 3px 15px #444;
+}
+/*卡片样式*/
+.card .panel{
+    padding:20px 25px 42px 25px;
+    position: relative;
+    z-index: 100;
+}
+.card-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+    z-index: 0;
+}
+.card-pic{
+    width: 48px;
+    height: 48px;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    display: block;
+}
+.card-pic img{
+    width: 48px;
+    height: 48px;
+    float: left;
+    border-radius: 40px;
+    margin-right: 10px;
+    display: block;
+    position: relative;
+}
+.user,.datetime,.card-tap,.card-footer{
+    position: relative;
+}
+.user:hover{
+    color: #337ccb;
+    cursor: pointer;
+}
+.card-desc{
+    display: inline-block;
+}
+.datetime{
+    font-size: 14px;
+    color:#999;
+}
+.add-friend{
+    float: right;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #337ccb;
+    border: 1px solid #337ccb;
+    width: 70px;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+}
+.add-friend:hover{
+    cursor: pointer;
+}
+.card-text{
+    padding-top: 20px;
+    line-height: 24px;
+    word-wrap: break-word;
+    font-size: 17px;
+    position: relative;
+}
+.card-text p{
+    width: 100%;
+    display: block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient:vertical;
+}
+.card-tap span{
+    background-color: rgba(100,174,255,0.5);
+    display: inline-block;
+    color: #337ccb;
+    font-size: 14px;
+    line-height: 32px;
+    height: 32px;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+.card-music{
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin-top: 10px;
+}
+.music-pic img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 8;
+}
+.music-pic{
+    display: inline-block;
+
+}
+.play-music{
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    z-index: 10;
+    top: 8px;
+    background: url("http://static4.qianqian.com/web/static/i/MZziAHyo.png") no-repeat;
+    background-position: -924px -24px;
+}
+.music-info{
+    display: inline-block;
+}
+.music-info a{
+    display: block;
+    max-width: 500px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.music-info a:hover,.card-text p:hover,.add-friend:hover{
+    color: #337ccb;
+}
+.music-info a:last-child{
+    font-size: 12px;
+}
+.card-image{
+    margin-top: 10px;
+    position: relative;
+}
+.card-image img{
+    max-width: 250px;
+    max-height: 300px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    display: inline-block;
+}
+.card-image img:hover,.card-tap:hover{
+    cursor: pointer;
+}
+.card-footer span i{
+    float: right;
+    margin-right: 5px;
+}
+.card-footer span{
+    color: #FFF;
+    font-size: 15px;
+    margin-left: 47px;
+    margin-top: -22px;
+    float: right;
+    cursor: pointer;
+    max-width: 100px;
+    line-height: 80px;
+}
+.card-footer span.share-content{
+    max-width: 600px;
+    margin-right: -20px;
+}
+.social-share{
+    display: inline-block;
+}
+.add-comment a{
+    color: #FFF;
+}
+.default .add-comment a,.default .card-footer span{
+    color: #999;
+}
+.card-footer span:hover,.add-comment a:hover{
+    color: #337ccb;
+}
+.add-praise.praised{
+    color: #03A9F4;
+    font-weight: bold;
+}
+.layui-flow-more{
+    text-align: right;
+}
+/*右侧功能模块*/
+.topic li{
+    position: relative;
+    height: 132px;
+    margin-bottom: 10px;
+}
+.topic-link{
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    text-indent: -9999em;
+    color: #fff;
+    position: absolute;
+}
+.topic-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.topic-bg{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1;
+    position: absolute;
+}
+.topic-text-title{
+    top: 47px;
+    height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.topic-text-num{
+    top:72px;
+    font-size: 12px;
+}
+.topic-text-num,.topic-text-title{
+    left: 10%;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    width: 80%;
+    position: absolute;
+}
+.topic-title{
+    color: #fff;
+    font-size: 14px;
+}
+.topic-fixed{
+    position:fixed;
+    top:70px;
+    z-index: 1000;
+    width: 255px;
+}
+
+/*写卡片表单样式*/
+#addbox{
+    padding: 10px 20px 51px 0;
+}
+.cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+    z-index: 0;
+}
+.tap-content .tap{
+    line-height: 38px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 8px;
+    margin: 0 2px;
+    color: #337ccb;
+    cursor: pointer;
+}
+.tap-content .tap:hover{
+    border: 1px solid #337ccb;
+    border-radius: 3px;
+}
+.tap-content .choosed-tap:after{
+    content: ' x';
+}
+.self-box{
+    display: inline-block;
+    width: 220px;
+    margin-left: 50px;
+    position: relative;
+}
+.self-tap{
+    display: inline-block;
+    width: 150px;
+}
+.tap-content,.color-content{
+    position: relative;
+}
+.color{
+    display: inline-block;
+    line-height: 37px;
+    font-size: 14px;
+    padding: 0 5px;
+    margin: 0 2px;
+    cursor: pointer;
+    color: white;
+} 
+.default{
+    background: white;
+    color: #000;
+}
+#card-btn{
+    margin: 45px auto 0 auto;
+    display: block;
+    position: relative;
+}
+.layui-anim.layui-anim-upbit dd{
+    color: black;
+}
+
